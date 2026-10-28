@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naranjita_Zero | En vivo</title>
+  <meta name="theme-color" content="#101116">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #101116;
+      color: #fff;
+      font-family: system-ui, Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 17px 22px;
+      background: #191a22;
+      border-bottom: 1px solid #30313c;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .logo {
+      background: #53fc18;
+      color: #101116;
+      padding: 8px;
+      border-radius: 9px;
+      font-weight: 900;
+    }
+    h1 { font-size: 20px; margin: 0; }
+    .subtitle { color: #a8a8b5; font-size: 12px; margin-top: 3px; }
+    .live { color: #53fc18; font-size: 12px; font-weight: 700; }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 16px;
+      max-width: 1500px;
+      padding: 18px;
+      margin: auto;
+    }
+    .panel {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #30313c;
+      border-radius: 12px;
+      background: #1b1c25;
+    }
+    .heading { padding: 14px; font-weight: 700; }
+    .player { aspect-ratio: 16 / 9; background: #000; }
+    iframe { display: block; width: 100%; border: 0; }
+    .player iframe { height: 100%; }
+    #chat { height: 620px; }
+    .footer {
+      padding: 14px;
+      color: #a8a8b5;
+      font-size: 12px;
+    }
+    .side { min-width: 0; }
+    .link {
+      display: inline-block;
+      margin-top: 6px;
+      color: #53fc18;
+      text-decoration: none;
+    }
+    @media (max-width: 800px) {
+      main { grid-template-columns: 1fr; padding: 10px; }
+      header { padding: 13px; }
+      #chat { height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">NZ</div>
+      <div>
+        <h1>Naranjita_Zero</h1>
+        <div class="subtitle">Mi sala oficial de streaming</div>
+      </div>
+    </div>
+    <div class="live">● KICK LIVE</div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="heading">📺 Mi transmisión</div>
+      <div class="player">
+        <iframe
+          src="https://player.kick.com/Naranjita_Zero"
+          title="Directo de Naranjita_Zero"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="footer">
+        Viendo el directo de Naranjita_Zero en Kick.
+        <br>
+        <a class="link"
+           href="https://kick.com/Naranjita_Zero"
+           target="_blank" rel="noopener">
+          Abrir canal en Kick ↗
+        </a>
+      </div>
+    </section>
+
+    <aside class="panel side">
+      <div class="heading">💬 Chat de la comunidad</div>
+      <iframe
+        id="chat"
+        title="Chat de Kick"
+        src="https://kick.com/Naranjita_Zero/chatroom">
+      </iframe>
+      <div class="footer">
+        Chat de Naranjita_Zero
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
